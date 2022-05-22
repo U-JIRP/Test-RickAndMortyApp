@@ -1,0 +1,4 @@
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Ingresa el personaje" #txtSearch (keyup.enter)="onSearch(txtSearch.value)">
+    <button class="btn btn-primary" type="button" id="button-addon2" (click)="onSearch(txtSearch.value)">Buscar</button>
+</div>

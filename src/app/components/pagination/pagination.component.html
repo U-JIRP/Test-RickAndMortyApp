@@ -1,0 +1,14 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item" [ngClass]="{'disabled': pagination.prevPage === 0  }">
+            <a class="page-link" type="button" (click)="goPrev(pagination.prevPage)"> Anterior </a>
+        </li>
+        <li class="page-item">
+            <a class="page-link">{{ pagination.currentPage }}</a>
+        </li>
+        <li class="page-item" [ngClass]="{'disabled': pagination.nextPage === 0 }">
+            <a class="page-link" type="button" (click)="goNext(pagination.nextPage)">Siguiente </a>
+
+        </li>
+    </ul>
+</nav>

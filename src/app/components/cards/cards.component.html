@@ -1,0 +1,17 @@
+<div class="row row-cols-1 row-cols-md-4 g-4 mb-3 animate__animated animate__fadeInUp animate__delay-1s">
+    <div class="col" *ngFor="let character of characters">
+        <div class="card radius-15 text-dark bg-light mb-3">
+            <div class="card-body text-center">
+                <img [src]="character.image" class="rounded-circle shadow   img-fluid img-thumbnail thumbnail-border-radius card-img-top" [alt]="character.name">
+                <h5 class="card-title mt-3">{{ character.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted text-center">
+                    <span class="badge rounded-pill" [ngClass]="{'bg-success': character.status === 'Alive', 
+                                                                 'bg-danger' : character.status === 'Dead',
+                                                                 'bg-secondary': character.status === 'unknown' }"> {{ character.status }}
+
+                    </span> - {{ character.species }}</h6>
+                <button type="button" class="btn btn-outline-primary btn-rounded btn-sm" (click)="details(character.id)">Más información</button>
+            </div>
+        </div>
+    </div>
+</div>

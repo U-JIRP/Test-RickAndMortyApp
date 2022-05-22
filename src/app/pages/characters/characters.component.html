@@ -1,0 +1,11 @@
+<ng-template #loading>
+    <app-loading></app-loading>
+</ng-template>
+
+<ng-container *ngIf="!load; else loading">
+    <h1 class="text-white">Personajes</h1>
+    <hr class="text-white">
+    <app-search></app-search>
+    <app-cards [characters]="characters"></app-cards>
+    <app-pagination [pagination]="pagination"></app-pagination>
+</ng-container>

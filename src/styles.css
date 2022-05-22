@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~animate.css/animate.min';
+body {
+    background-image: url(assets/img/Twilight-0.7s-1366px.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
